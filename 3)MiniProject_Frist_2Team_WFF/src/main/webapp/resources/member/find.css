@@ -1,0 +1,303 @@
+@charset "utf-8";
+
+/* 구글 폰트(본문-영어) Mooli : https://fonts.google.com/specimen/Mooli?query=mooli
+font-family: 'Mooli', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+/* 눈누 폰트(본문-한글) https://noonnu.cc/font_page/15*/
+@font-face {
+  font-family: 'Arita-dotum-Medium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* 구글 폰트(포인트-영어) Italiana : https://fonts.google.com/specimen/Italiana?query=Italiana
+  font-family: 'Italiana', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+	
+}
+
+body{
+	/* margin:0; */
+	color:#6a6f8c;
+	background-color: #FFF3D6; 
+	font:600 16px/18px 'Mooli', sans-serif;
+}
+
+.maint_empty{
+	height: 95vh;
+  }
+  
+
+.findid_row{
+	/*position: relative;*/
+	width: 100%;
+	margin-top: 100px;
+	/* margin-bottom: 1200px; */
+ }
+
+.card{
+	position: absolute;
+	/* top: 50%; */
+	left: 50%;
+	transform: translate(-50%, 10%);
+	width: 100%;
+	max-width:527px;
+	min-height:720px;
+}
+
+.findid-box{
+	width:100%;
+	margin: auto;
+	max-width:527px;
+	min-height:720px;
+	position:relative;
+	background: url(../images/loginimage.jpg) no-repeat center;
+	box-shadow:0 12px 15px 0 rgba(178,202,170,.35),0 17px 50px 0 rgba(178,202,170,.19);
+}
+.findid-snip{
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:50px 60px 40px 60px;
+	background:rgba(178,202,170,.9);
+}
+.findid-snip .findid,
+.findid-snip .find-pw-form{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+	transition:all .4s linear;
+}
+.findid-snip .find-id,
+.findid-snip .find-pw,
+.findid-space .group .check{
+	display:none;
+}
+.findid-snip .tab,
+.findid-space .group .label,
+.findid-space .group .button{
+	text-transform:uppercase;
+}
+.findid-space .group .label{
+	font-weight: normal;
+}
+.findid-snip .tab{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 10px;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+	
+}
+.findid-snip .find-id:checked + .tab,
+.findid-snip .find-pw:checked + .tab{
+	color:#fff;
+	border-color:#EF5A4A;
+}
+.findid-space{
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+.findid-space .group{
+	margin-bottom:15px;
+}
+.findid-space .group .label,
+.findid-space .group .input,
+.findid-space .group .button{
+	width:100%;
+	color:#fff;
+	display:block;
+}
+.findid-space .group .input,
+.findid-space .group .button{
+	border:none;
+	padding:15px 15px;
+	border-radius:25px;
+	background:rgba(255,255,255,.2);
+}
+.findid-space .group input[data-type="password"]{
+	text-security:circle;
+	-webkit-text-security:circle;
+}
+.findid-space .group .label{
+	color:#faf5f5;
+	font-size:12px;
+}
+.findid-space .group .button{
+	background:#EF5A4A;
+}
+.findid-space .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:rgba(255,255,255,.7);
+}
+.findid-space .group label .icon:before,
+.findid-space .group label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:#fff;
+	position:absolute;
+	transition:all .2s ease-in-out 0s;
+}
+.findid-space .group label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	transform:scale(0) rotate(0);
+}
+.findid-space .group label .icon:after{
+	top:6px;
+	right:0;
+	transform:scale(0) rotate(0);
+}
+
+
+.findid-space .group .check:checked + label{
+	color:#fff;
+}
+
+.findid-space .group .check:checked + label .icon{
+	background:#EF5A4A;
+}
+.findid-space .group .check:checked + label .icon:before{
+	transform:scale(1) rotate(45deg);
+}
+.findid-space .group .check:checked + label .icon:after{
+	transform:scale(1) rotate(-45deg);
+}
+.findid-snip .find-id:checked + .tab + .find-pw + .tab + .findid-space .findid{
+	transform:rotate(0);
+}
+.findid-snip .find-pw:checked + .tab + .findid-space .find-pw-form{
+	transform:rotate(0);
+}
+
+.group { overflow: hidden;}
+
+
+
+.addressbtn{
+	margin: 10px 0px 0px 270px;
+	padding: 10px 10px;
+	background-color: rgba(179,203,190,.8) !important; 
+	height: 100%;
+	width: 30% !important;
+
+}
+
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+
+.hr{
+	height:2px;
+	margin:30px 0 20px 0;
+	background: rgba(239, 90, 74, 0.5);
+}
+.foot{
+	text-align:center;
+	font-size: 12px;
+	line-height: 1.6;
+}
+.foot .logo img{
+	width: 50px;
+	padding-top: 50px;
+}
+
+.card{
+	width: 500px;
+	background-color: #EF5A4A;
+}
+
+
+::placeholder{
+color: #dbdbdb;
+} 
+
+@media (max-width: 767px) {
+	.card{
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 555px) {
+	.card{
+		width: 70%;
+		margin: 0 auto;
+	}
+	.findid-snip .tab {
+		font-size: 18px;	
+	}
+}
+
+@media (max-width: 555px) {
+	.card{
+		width: 65%;
+	
+	}
+	.findid-snip{
+		padding: 50px 50px 40px 50px;
+	}
+	.findid-snip .tab {
+		font-size: 16px;	
+	}
+	.findid-space .group .input, .findid-space .group .button {
+		border: none;
+		padding: 10px 20px;
+	}
+	
+}
+
+@media (max-width: 446px) {
+	.card{
+		width: 65%;
+	
+	}
+	.findid-snip .tab {
+		font-size: 16px;	
+	}
+
+	.findid-snip{
+		padding: 60px 40px 30px 40px;
+	}
+	
+}
+
+@media (max-width: 380px) {
+	.card{
+		width: 60%;
+		margin: 0 auto;
+	}
+	.findid-snip{
+		padding: 50px 20px 20px 30px;
+	}
+	.findid-snip .tab{	
+		margin: 0 5px 15px 0;
+		display: inline;
+		margin-bottom: 20px;
+	
+	}
+	.group{
+		margin-top: 30px;
+	}
+}

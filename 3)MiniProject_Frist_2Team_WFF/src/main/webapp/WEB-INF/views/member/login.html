@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <title>WFF LOGIN</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/nav_footer.css">
+  <link rel="stylesheet" href="assets/css/login.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <!--
+
+TemplateMo 582 Tale SEO Agency
+
+https://templatemo.com/tm-582-tale-seo-agency
+
+-->
+</head>
+<body>
+
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="nav_footer.html" class="logo">
+              <img src="assets/images/logo.svg" alt="" style="max-width: 112px;">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" class="active">About</a></li>
+              <li class="scroll-to-section"><a href="#services">Notice</a></li>
+              <li class="scroll-to-section"><a href="#projects">FAQs</a></li>
+              <li class="has-sub">
+                <a href="javascript:void(0)">Board</a>
+                <ul class="sub-menu">
+                  <li><a href="#">Notice</a></li>
+                  <li><a href="#">Community</a></li>
+                  <li><a href="#">Free</a></li>
+                </ul>
+              </li>
+              <li class="scroll-to-section"><a href="#contact">Contact</a></li>
+              <li><a href="#">Mypages</a></li>
+              <li><a href="#">login</a></li>
+            </ul>
+            <a class='menu-trigger'>
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  
+  <!-- login -->
+<div class="maint_empty">
+  <div class="row">
+      <div class="col-md-6 mx-auto p-0" >
+          <div class="card">
+              <div class="login-box">
+                  <div class="login-snip">
+                      <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1"
+                          class="tab">Login</label>
+                      <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign
+                          Up</label>
+                      <div class="login-space">
+                          <div class="login">
+                              <div class="group">
+                                  <label for="user" class="label">Username</label>
+                                  <input id="user" type="text" class="input" placeholder="Enter your username">
+                              </div>
+                              <div class="group">
+                                  <label for="pass" class="label">Password</label>
+                                  <input id="pass" type="password" class="input" data-type="password"
+                                      placeholder="Enter your password">
+                              </div>
+                              <div class="group">
+                                  <input id="check" type="checkbox" class="check" checked>
+                                  <label class="keep" for="check"><span class="icon"></span> Keep me Signed in</label>
+                              </div>
+                              <div class="group">
+                                  <input type="submit" class="button" value="LogIn">
+                              </div>
+                              <div class="hr"></div>
+                              <div class="foot">
+                                  <a href="#">Forgot ID?</a><br><br>
+                                  <a href="#">Forgot Password?</a>
+                                  <p><a class="logo" href="#"><img src="./assets/images/logo.svg" alt="fww로고"></a></p>
+                              </div>
+                          </div>
+                          <div class="sign-up-form">
+                              <div class="group">
+                                  <label for="user" class="label">Username</label>
+                                  <input id="user" type="text" class="input" placeholder="Create your Username">
+                              </div>
+                              <div class="group">
+                                  <label for="pass" class="label">Password</label>
+                                  <input id="pass" type="password" class="input" data-type="password"
+                                      placeholder="Create your password">
+                              </div>
+                              <div class="group">
+                                  <label for="pass" class="label">Repeat Password</label>
+                                  <input id="pass" type="password" class="input" data-type="password"
+                                      placeholder="Repeat your password">
+                              </div>
+                              <div class="group">
+                                  <label for="pass" class="label">Email Address</label>
+                                  <input id="pass" type="text" class="input" placeholder="Enter your email address">
+                              </div>
+                              <div class="group">
+                                  <label for="pass" class="label address2">Address</label>
+                                    <!-- kakao 주소 api-->
+                                    <input type="text" id="sample6_postcode" placeholder="우편번호" class="label post">
+                                    <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" class="label findpost"><br>
+                                    <input type="text" id="sample6_address" placeholder="주소" class="label ditailadd">
+                                    <input type="text" id="sample6_detailAddress" placeholder="상세주소" class="label ditailadd2">
+
+                                    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+                                    <script>
+                                        function sample6_execDaumPostcode() {
+                                            new daum.Postcode({
+                                                oncomplete: function(data) {
+                                                    // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                                                    // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                                                    // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                                                    var addr = ''; // 주소 변수
+                                                    var extraAddr = ''; // 참고항목 변수
+
+                                                    //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                                                    if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                                                        addr = data.roadAddress;
+                                                    } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                                                        addr = data.jibunAddress;
+                                                    }
+
+                                                    // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+                                                    if(data.userSelectedType === 'R'){
+                                                        // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+                                                        // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+                                                        if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                                                            extraAddr += data.bname;
+                                                        }
+                                                        // 건물명이 있고, 공동주택일 경우 추가한다.
+                                                        if(data.buildingName !== '' && data.apartment === 'Y'){
+                                                            extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                                                        }
+                                                        // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+                                                        if(extraAddr !== ''){
+                                                            extraAddr = ' (' + extraAddr + ')';
+                                                        }
+                                                        // 조합된 참고항목을 해당 필드에 넣는다.
+                                                        document.getElementById("sample6_extraAddress").value = extraAddr;
+                                                    
+                                                    } else {
+                                                        document.getElementById("sample6_extraAddress").value = '';
+                                                    }
+
+                                                    // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                                                    document.getElementById('sample6_postcode').value = data.zonecode;
+                                                    document.getElementById("sample6_address").value = addr;
+                                                    // 커서를 상세주소 필드로 이동한다.
+                                                    document.getElementById("sample6_detailAddress").focus();
+                                                }
+                                            }).open();
+                                        }
+                                    </script><!--/ kakao 주소 api-->
+                              </div>
+                              <div class="group">
+                                  <input type="submit" class="button" value="Sign Up">
+                              </div>
+                              <div class="hr"></div>
+                              <div class="foot">
+                                  <label for="tab-1">Already Member?</label>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!--==============end login=============-->
+
+
+
+
+<!-- footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer_left">
+        <ul>
+          <li class="f_logo">
+            <img src="./assets/images/logo_text1.svg" alt="footer_logo1">
+            <img src="./assets/images/logo_text2.svg" alt="footer_logo2">
+          </li>
+          <li class="f_cs">
+            <a href="nav_footer.html">
+              <button type="button">고객센터></button>
+            </a>
+            <section class="f_time">
+              <span>고객센터 1661-8686</span>
+              <span>AM10:00 - PM 18:00 점심시간 13:00 - 14:00</span>
+            </section>
+          </li>
+          <li class="f_con">
+            <p>
+              주식회사 위프 | 공동대표 어예진 조수정 조성진 조윤채 박혜림 채승병 <br>
+              본 사이트는 포트폴리오로 상업적 웹사이트와 무관합니다. <br> 
+              사용한 폰트 : 아리따돋음(아모레퍼시픽) | 통신판매 신고번호 2023-서울구로-3 <br>
+              <br>
+              ⓒWFF,Inc. All rights reserved
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="footer_right">
+        <div class="get-free-quote">
+          <form id="free-quote" method="submit" role="search" action="#">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-heading">
+                  <h2>Contact Us</h2>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Enter your E-mail Address"
+                    required="">
+                </fieldset>
+                <fieldset>
+                  <!-- <input type="button" class="email_btn" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail"
+                    required=""> -->
+                    <button>SUBSCIBE NOW</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- <script src="assets/js/isotope.min.js"></script> -->
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <!-- <script src="assets/js/custom.js"></script> -->
+
+</body>
+
+
+</html>

@@ -1,0 +1,151 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<%@include file="../includes/header.jsp" %> 
+
+	 <!--about CSS-->
+	 <link rel="stylesheet" href="/resources/pages/about.css">
+
+</head>
+
+<%@ include file="../includes/nav.jsp"%>
+
+<!--===============about===============-->
+<h2 class="gho">About WFF</h2>
+  <div class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 align-self-center">
+          <div class="caption  header-text">
+            <p class="roc">
+              <h2 class="f_text3">WFF : WE FIND FLOWERS</h2><br><br>
+              <h3><b><span class="f_color">WFF</span>와 함께 꽃 찾으러 같이 가볼까요??</b></h3><br><br>
+            <span class="f_color">●  </span>WFF는 꽃을 찾는 사람들 입니다!<br><br>
+            <span class="f_color">●  </span>꽃선물 곤란하신가요? 이제는 WFF에서 꽃의 의미로 나의 마음을 전달해 보아요 !<br><br>
+            <span class="f_color">●  </span>이제는 꽃도 반려의 시대가 왔다 ! 반려식물 반려 꽃의 시대 !<br></p>
+            <span class="f_color">●  </span>WFF는 꽃을 받은 순간부터 자연으로 돌려보내는 순간까지 함께합니다.<br><br>
+            
+           
+          
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center" >
+          
+          <img class="f_img2" src="/resources/images/img3.png" alt="">
+      
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="video-info section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="video-thumb">
+            <img src="/resources/images/2222nsplash_uiWIMe_dMHU.png" alt="" class="f_img">
+          
+          </div>
+        </div>
+        <div class="col-lg-6 align-self-center">
+          <div class="section-heading">
+            <h2 class="f_text">꽃은 어디서 따오나요??</h2>
+                       
+            <div class="line-dec"></div>
+            <p class="f_text2">꽃 재배는 다양한 지역에서 이루어지고 있으며, 꽃 농장들이 전국적으로 분포하고 있습니다.<br> 꽃 재배가 활발한 몇 가지 지역과 재배되는 꽃의 종류에 대한 예는 다음과 같습니다:
+
+              대전: 대전은 중부지역에 위치하며 꽃과 식물 재배에 적합한 기후와 토양 조건을 갖추고 있습니다.<Br> 대전 주변 지역에는 다양한 꽃 농장들이 있습니다.
+              
+              경기도 화성시: 경기도 화성시는 수도권에 가까워 꽃과 식물 생산을 위한 큰 시장으로 알려져 있습니다.<Br> 화성시와 인근 지역에서는 다양한 꽃이 재배됩니다.
+              
+              전라남도 장흥군: 전라남도 장흥군은 따뜻한 기후와 아름다운 풍경을 갖추고 있어 꽃 재배에 적합한 환경을 제공합니다.<Br> 특히 홍화꽃 재배가 잘 알려져 있습니다.
+              
+              제주도: 제주도는 온화한 기후와 다양한 화훼농장을 보유하고 있어 꽃 재배에 적합한 지역 중 하나입니다.<br> 제주도에서는 특히 왕벚꽃과 제주특별자치도 고유의 꽃들이 재배됩니다.
+              
+              강원도 평창군: 강원도 평창군은 시원한 여름과 춥고 맑은 겨울을 갖추고 있어 꽃 재배에 이상적인 환경을 제공합니다.<br> 이 지역에서는 다양한 꽃과 연꽃이 재배됩니다.
+              
+              경북 경주시: 경북 경주시는 역사적인 유적지와 함께 꽃과 식물 재배에 적합한 기후와 토양을 제공하는 지역입니다.<Br>
+              
+              이러한 지역에서는 꽃 농장들이 다양한 꽃을 재배하며 시장에 공급합니다. </p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="happy-clients section">
+    <div class="container">
+      <div class="row">
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="cta section">
+    <div class="container">
+      <div class="row">
+       
+          <h4>찾아오시는 길</h4>
+      
+    <div id="map" style="height:500px; margin: 10px auto;"></div>
+
+          <div id="text">
+                          <p class="f_text2">서울 구로구 경인로 557 신한은행 4층</p>
+                          <p class="f_text2">지하철 : 구로역 3번출구 구로광장 왼쪽대각선 방향</p>
+                          <p class="f_text2">버스 : 구일역.구로공구상가 or 구로역.신도림동 하차 후 도보 10분</p>
+                          <p class="f_text2">구로역.구로기계공구상가 하차 후 도보 1분</p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+<!--==============end about=============-->
+
+ <!-- https://apis.map.kakao.com/web/sample/addMapControl/ -->
+ <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=23bff20fd36f0395446770ee5a12951a"></script>
+<script>
+
+ var mapContainer = document.getElementById("map"), // 지도를 표시할 div 
+     mapOption = {
+         center: new kakao.maps.LatLng(37.5030698, 126.8789856), // 지도의 중심좌표
+         level: 3 // 지도의 확대 레벨
+     };
+
+ var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+ // 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
+ var mapTypeControl = new kakao.maps.MapTypeControl();
+
+ // 지도에 컨트롤을 추가해야 지도위에 표시됩니다
+ // kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+ map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+ // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+ var zoomControl = new kakao.maps.ZoomControl();
+ map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+ //Kakao Map 마커 생성하기(카카오 개발자센터 Kakao Maps API Sample 참고)
+ // https://apis.map.kakao.com/web/sample/basicMarker/
+ // 마커가 표시될 위치입니다 
+ var markerPosition = new kakao.maps.LatLng(37.5030698, 126.8789856);
+
+ // 마커를 생성합니다
+ var marker = new kakao.maps.Marker({
+     position: markerPosition
+ });
+
+ //window 객체 활용 map 안에 마커 중앙 표시 : resize 처리(추가코딩)
+ window.addEventListener("resize", function () {
+     map.setCenter(new kakao.maps.LatLng(37.5030698, 126.8789856))
+ });
+
+ // 마커가 지도 위에 표시되도록 설정합니다
+ marker.setMap(map);
+// 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+// marker.setMap(null);    
+
+</script>
+<%@ include file="../includes/footer.jsp"%>
